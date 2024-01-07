@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather app</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-['Arial'] bg-gray-800">
+    <div
+      class="flex flex-col justify-center max-w-md w-3/5 bg-gradient-to-r from-cyan-500 to-blue-300 mt-24 mx-auto mb-0 rounded-3xl px-10 py-10 text-center text-white"
+    >
+      <div class="flex items-center w-5/5 justify-between">
+        <input
+          id="input"
+          class="py-3 pl-5 pr-20 rounded-3xl border-0 outline-0 h-17 text-lg text-black"
+          type="text"
+          placeholder="City"
+          spellcheck="false"
+        />
+        <button id="button" class="rounded-full cursor-pointer">
+          <img
+            src="../images/search.png"
+            alt=""
+            class="w-10 h-10 rounded-full"
+          />
+        </button>
+      </div>
+      <div id="error" class="text-2xl hidden mt-10 font-bold">
+        <p>Invalid city name</p>
+      </div>
+      <div id="weather" class="hidden">
+        <div class="flex flex-col items-center mt-10">
+          <img
+            id="weather-icon"
+            src="../images/rain.png"
+            alt=""
+            class="w-40 h-40"
+          />
+          <div class="mt-5">
+            <h1 id="temperature" class="text-7xl font-bold">22°C</h1>
+            <h2 id="city" class="text-3xl font-medium mt-3">New York</h2>
+          </div>
+        </div>
+        <div class="flex justify-between mt-10">
+          <div>
+            <img src="../images/waves.png" class="w-20 h-20" />
+            <h1 id="humidity" class="text-2xl">50%</h1>
+            <h2>Humidity</h2>
+          </div>
+          <div>
+            <img src="../images/wind.png" class="w-20 h-20" />
+            <h1 id="wind" class="text-2xl">15 km/h</h1>
+            <h2>Wind Speed</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
